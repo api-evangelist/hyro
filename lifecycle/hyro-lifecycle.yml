@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.hyro.ai
+status_page: https://status.hyro.ai
+status_page_provider: Atlassian Statuspage
+notes: >-
+  Hyro publishes a live operational status page (Atlassian Statuspage, title
+  "Hyro AI Status") at https://status.hyro.ai. No public developer API,
+  versioning policy, deprecation policy, or SLA document was discoverable on the
+  public web surface at probe time (the primary marketing site at hyro.ai is
+  behind Cloudflare bot protection and docs.hyro.ai resolves to a customer
+  product dashboard login rather than API reference documentation).
+versioning: null
+deprecation: null
+sla: null
+deprecated_operations: []
