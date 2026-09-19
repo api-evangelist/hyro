@@ -1,0 +1,42 @@
+generated: '2026-09-19'
+method: probed
+source: conventional-path probes on www.hyro.ai plus the artifacts harvested this pass (well-known/, security/, lifecycle/)
+name: Airbud Technologies (Hyro) Regulatory Posture
+description: >-
+  Harvest-only record of horizontal regulatory signals. None could be verified: every page on
+  www.hyro.ai — /security/, /trust/, /accessibility/, /legal/subprocessors/, /subprocessors/, /legal/dpa/,
+  /privacy-policy/, /terms-of-service/ — answers crawlers with a Cloudflare bot challenge (HTTP 403,
+  cf-mitigated: challenge), so no conformance report, dated subprocessor table, DPA or transparency page
+  could be read. The only first-party security.txt reachable (status.hyro.ai) belongs to Atlassian
+  Statuspage. Third-party reviews assert SOC 2 Type II / HIPAA / BAA posture, but nothing first-party was
+  readable, and the "trust.hyros.com" SafeBase portal that search engines surface belongs to Hyros (an
+  ad-attribution company), not Hyro — it is deliberately NOT recorded here. An empty signals map is the
+  measurement.
+signals: {}
+probes:
+- url: https://www.hyro.ai/accessibility/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/legal/subprocessors/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/subprocessors/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/legal/dpa/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/security/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/trust/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/privacy-policy/
+  status: 403
+  note: Cloudflare bot challenge
+- url: https://www.hyro.ai/.well-known/security.txt
+  status: 404
+- url: https://status.hyro.ai/.well-known/security.txt
+  status: 200
+  note: Atlassian's document (Canonical atlassian.com), not Hyro's

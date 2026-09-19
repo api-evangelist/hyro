@@ -1,0 +1,23 @@
+generated: '2026-09-19'
+method: searched
+source: https://www.hyro.ai/pricing/
+name: Airbud Technologies (Hyro) Plans and Pricing
+description: >-
+  Airbud Technologies Inc. sells as Hyro, an enterprise conversational-AI platform for health systems.
+  No public plan tiers are published: the site (including /pricing/) answers every crawler request with
+  a Cloudflare bot challenge (HTTP 403, cf-mitigated: challenge), and there is no self-serve sign-up,
+  free tier or developer pricing page anywhere on hyro.ai, docs.hyro.ai (302 to the customer dashboard
+  login) or status.hyro.ai. Third-party reviewers uniformly describe pricing as quote-only via a sales
+  demo. plan_count: 0 is the measurement, not an omission.
+plan_count: 0
+plans: []
+self_serve: false
+free_tier: false
+sales_contact: https://www.hyro.ai/
+probes:
+- url: https://www.hyro.ai/pricing/
+  status: 403
+  note: Cloudflare bot challenge; page exists for browsers but publishes no tiered pricing
+- url: https://docs.hyro.ai/
+  status: 302
+  note: redirects to https://dashboard.hyro.ai/ customer login

@@ -72,6 +72,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Successor
+  url: https://www.hyro.ai/
+- type: SecondaryMarket
+  url: https://equityzen.com/company/airbudtechnologiesinc
+- type: LinkedIn
+  url: https://www.linkedin.com/company/hyroai
+- type: Blog
+  url: https://www.hyro.ai/blog/
+- type: WellKnownProbe
+  url: well-known/hyro-well-known.yml
+- type: Plans
+  url: plans/hyro-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/hyro-rate-limits.yml
+- type: RegulatoryPosture
+  url: regulatory/hyro-regulatory-posture.yml
 - type: DomainSecurity
   url: security/hyro-domain-security.yml
 - type: Lifecycle

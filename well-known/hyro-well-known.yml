@@ -1,0 +1,354 @@
+generated: '2026-09-19'
+method: probed
+source: direct unauthenticated HTTPS probes of the legacy airbud.io domain and every Hyro host (site, www, docs, dashboard,
+  status)
+name: Airbud Technologies / Hyro .well-known Probe
+description: 'No .well-known document is served on any Airbud/Hyro host. airbud.io (the legacy domain) does not answer HTTPS
+  at all. hyro.ai 301s every path to www.hyro.ai, where /.well-known/* returns a hard 404 (the negative control too) and non-well-known
+  probes hit a Cloudflare bot challenge. docs.hyro.ai 302s every path to the dashboard.hyro.ai login or 404s. dashboard.hyro.ai
+  answers 200 with the same 5,085-byte HTML SPA shell for every EXTENSIONLESS path (openid-configuration, oauth-authorization-server,
+  oauth-protected-resource, api-catalog) — a client-side router catch-all, not a document — while .json paths and the .json
+  negative control 404. status.hyro.ai (Atlassian Statuspage) serves a security.txt whose Canonical is atlassian.com — the
+  vendor''s document, not Hyro''s. NO WellKnown or SecurityTxt pointer is emitted: nothing here is a hit.'
+hit_count: 0
+hosts:
+- host: airbud.io
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 0
+    content_type: null
+    bytes: 0
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+- host: www.airbud.io
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 0
+    content_type: null
+    bytes: 0
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    hit: false
+    note: no HTTPS service (connection failed)
+- host: hyro.ai
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 301
+    content_type: text/html; charset=UTF-8
+    bytes: 0
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/security.txt
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/openid-configuration
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/oauth-authorization-server
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/oauth-protected-resource
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/api-catalog
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/ai-plugin.json
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/agent-card.json
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+    redirect: https://www.hyro.ai/.well-known/agent.json
+- host: www.hyro.ai
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 404
+    content_type: text/html; charset=UTF-8
+    bytes: 320253
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html; charset=UTF-8
+- host: docs.hyro.ai
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 302
+    content_type: text/plain; charset=utf-8
+    bytes: 155
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    file: null
+    hit: false
+    content_type: text/plain; charset=utf-8
+    redirect: https://dashboard.hyro.ai/?redirectUri=%2Freadme-token&redirect=%2F.well-known%2Fsecurity.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    file: null
+    hit: false
+    content_type: text/plain; charset=utf-8
+    redirect: https://dashboard.hyro.ai/?redirectUri=%2Freadme-token&redirect=%2F.well-known%2Fai-plugin.json
+  - path: /.well-known/agent-card.json
+    status: 302
+    file: null
+    hit: false
+    content_type: text/plain; charset=utf-8
+    redirect: https://dashboard.hyro.ai/?redirectUri=%2Freadme-token&redirect=%2F.well-known%2Fagent-card.json
+  - path: /.well-known/agent.json
+    status: 302
+    file: null
+    hit: false
+    content_type: text/plain; charset=utf-8
+    redirect: https://dashboard.hyro.ai/?redirectUri=%2Freadme-token&redirect=%2F.well-known%2Fagent.json
+- host: dashboard.hyro.ai
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 404
+    content_type: text/html
+    bytes: 321
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    hit: false
+    content_type: text/html;
+    note: 200 text/html, 5,085-byte SPA shell (same body as the dashboard root) — client-side router catch-all for extensionless
+      paths, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    hit: false
+    content_type: text/html;
+    note: 200 text/html, 5,085-byte SPA shell (same body as the dashboard root) — client-side router catch-all for extensionless
+      paths, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    hit: false
+    content_type: text/html;
+    note: 200 text/html, 5,085-byte SPA shell (same body as the dashboard root) — client-side router catch-all for extensionless
+      paths, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    hit: false
+    content_type: text/html;
+    note: 200 text/html, 5,085-byte SPA shell (same body as the dashboard root) — client-side router catch-all for extensionless
+      paths, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    hit: false
+    content_type: text/html
+- host: status.hyro.ai
+  negative_control:
+    path: /.well-known/airbudtechnologiesinc-negative-control-z2m9q5mr.json
+    status: 404
+    content_type: null
+    bytes: 0
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    hit: false
+    content_type: text/plain
+    note: '200 text/plain but the document is Atlassian''s (Canonical: https://www.atlassian.com/.well-known/security.txt)
+      — Statuspage vendor, not Hyro; not a hit'
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    hit: false
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    hit: false

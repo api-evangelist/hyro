@@ -1,0 +1,20 @@
+generated: '2026-09-19'
+method: searched
+source: https://docs.hyro.ai/
+name: Airbud Technologies (Hyro) Rate Limits
+description: >-
+  No public API and therefore no published rate limits. docs.hyro.ai 302s every path to the
+  dashboard.hyro.ai customer login, www.hyro.ai/developers/ and /api/ answer with a Cloudflare bot
+  challenge, and no rate-limit headers can be observed because there is no unauthenticated endpoint
+  to call. limit_count: 0 is an honest zero.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+probes:
+- url: https://docs.hyro.ai/
+  status: 302
+- url: https://www.hyro.ai/developers/
+  status: 403
+- url: https://www.hyro.ai/api/
+  status: 403
