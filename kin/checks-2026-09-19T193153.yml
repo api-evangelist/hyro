@@ -2,16 +2,16 @@
 kin_checks:
   slug: hyro
   schema_version: 0.22.0
-  scored_at: '2026-09-18'
-  run_ts: 2026-09-18T231945
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 8
-    partial: 0
-    missed: 89
+    earned: 9
+    partial: 1
+    missed: 87
     na: 39
   checks:
   - id: multiple_apis
@@ -102,8 +102,6 @@ kin_checks:
     status: missed
   - id: support_channel
     status: missed
-  - id: blog_present
-    status: missed
   - id: plans_present
     status: missed
   - id: plans_multiple
@@ -170,8 +168,6 @@ kin_checks:
     status: missed
   - id: openapi_examples
     status: missed
-  - id: rate_limit_signal
-    status: missed
   - id: event_surface_described
     status: missed
   - id: agent_skills
@@ -192,6 +188,10 @@ kin_checks:
     status: missed
   - id: agentic_commerce
     status: missed
+  - id: rate_limit_signal
+    status: partial
+    earned: 3.5
+    detail: 'grade: documented'
   na:
   - asyncapi_3_x
   - channels_defined
